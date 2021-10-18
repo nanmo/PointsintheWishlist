@@ -54,7 +54,7 @@ function wishpoints(enablefetch){
 			let points = "";
 			if(lopoints.length!=0){
 				points = lopoints[0].children[1].innerText.trim();
-				item.firstElementChild.insertAdjacentHTML("beforeend", " " + points);
+				item.firstElementChild.insertAdjacentHTML("beforeend", " / " + points);
 			}
 			//debug
 			//console.log(points);
@@ -74,7 +74,7 @@ function wishpoints(enablefetch){
 					var points = lopoints[0].children[1].innerText.trim();
 					//debug
 					// console.log(kindlepoints);
-					item.firstElementChild.insertAdjacentHTML("beforeend", " " + points);
+					item.firstElementChild.insertAdjacentHTML("beforeend", " / " + points);
 				}
 			}).fail(function(xhr,status,error){
 				console.error(error);
