@@ -1,6 +1,7 @@
 # Insert AmazonPoints in the Wishlist
 
 AmazonのWishlistに入っているKindle本のAmazonポイントを表示させる拡張
+
 ポイント表示の前に区切りのスラッシュを入れる版(個人的には開発者モードからの利用で十分なので、パッケージ化の予定はありません)
 
 # Version
