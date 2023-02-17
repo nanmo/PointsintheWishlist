@@ -54,7 +54,7 @@ function wishpoints(enablefetch){
 			//loyalty-pointsがない場合にはエラーが出るため存在判定
 			let points = "";
 			if(lopoints.length!=0){
-				points = lopoints[0].children[1].innerText.trim();
+				points = lopoints[0].innerText.trim();
 				item.firstElementChild.insertAdjacentHTML("beforeend", " / " + points);
 			}
 			//debug
@@ -73,7 +73,7 @@ function wishpoints(enablefetch){
 				//kindle本でポイントがついている場合のみ計算
 				if(lopoints.length){
 					//trimをすることでスペースを削除
-					var points = lopoints[0].children[1].innerText.trim();
+					var points = lopoints[0].innerText.trim();
 					//debug
 					// console.log(kindlepoints);
 					item.firstElementChild.insertAdjacentHTML("beforeend", " / " + points);
