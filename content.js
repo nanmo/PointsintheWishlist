@@ -47,7 +47,8 @@ function wishpoints(enablefetch){
 			fetch('https://www.amazon.co.jp/dp/'+asin)
 			.then(res=>res.text())
 			.then(text=>{
-			const lopoints = dom_parser.parseFromString(text, "text/html").getElementsByClassName("loyalty-points");
+			//とりあえずKindle本で動くように改修(一般商品はまた別になるはず)
+			const lopoints = dom_parser.parseFromString(text, "text/html").getElementsByClassName("a-color-price a-text-normal");
 			//debug
 			//console.log(lopoints);
 			//loyalty-pointsがない場合にはエラーが出るため存在判定
@@ -67,7 +68,8 @@ function wishpoints(enablefetch){
 				url:'https://www.amazon.co.jp/dp/'+asin,
 				dataType:'html'
 			}).done(function(data,status,xhr){
-				const lopoints = dom_parser.parseFromString(data, "text/html").getElementsByClassName("loyalty-points");
+				//とりあえずKindle本で動くように改修(一般商品はまた別になるはず)
+				const lopoints = dom_parser.parseFromString(data, "text/html").getElementsByClassName("a-color-price a-text-normal");
 				//kindle本でポイントがついている場合のみ計算
 				if(lopoints.length){
 					//trimをすることでスペースを削除
